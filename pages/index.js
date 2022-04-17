@@ -21,17 +21,11 @@ export default function Home({ projects }) {
     <div>
       <header className={`${styles.header} h-[80vh] md:h-[90vh]`}>
         <Nav background={"bg-transparent"} />
-        <div className=" mx-auto px-5 flex flex-col items-center justify-center gap-4 w-full h-full">
+        <div className="z-0 mx-auto px-5 flex flex-col items-center justify-center gap-4 w-full h-full">
           <h2 className="text-center text-white font-medium  text-3xl">
             Hello
           </h2>
-          <h1
-            data-aos="fade-down"
-            data-aos-offset="0"
-            data-aos-delay="25"
-            data-aos-duration="1000"
-            className="text-center text-white text-4xl font-bold md:text-6xl"
-          >
+          <h1 className="text-center text-white text-4xl font-bold md:text-6xl">
             I&apos;m Olasunkanmi
           </h1>
           <em

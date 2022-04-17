@@ -6,7 +6,7 @@ const Nav = ({ background }) => {
   const [showNav, setShowNav] = useState(false);
   const [fixedNav, setFixedNav] = useState("");
   const handleScroll = () => {
-    if (window.pageYOffset > 80) {
+    if (window.pageYOffset > 100) {
       setFixedNav("navbar-fixed");
     } else {
       setFixedNav("");
@@ -18,10 +18,12 @@ const Nav = ({ background }) => {
   }, []);
   return (
     // Start of Nav section
-    <nav className={`h-[60px] ${fixedNav} `}>
+    <nav className={`h-[60px] ${fixedNav} relative z-10  `}>
       {/* Navbar */}
       <div
-        className={`flex justify-between h-[100%] items-center p-5  text-white ${background}`}
+        className={`flex justify-between h-[100%] items-center p-5  text-white ${
+          showNav ? "bg-mainColor" : background
+        }`}
       >
         {/* Logo */}
         <h3 className="font-bold text-2xl">Olasunkanmi</h3>
@@ -54,10 +56,11 @@ const Nav = ({ background }) => {
           </li>
         </ul>
       </div>
+      {/* Small Screen */}
       <div
         className={`${
           showNav ? "flex" : "hidden"
-        } w-[100%] transition-all duration-700`}
+        } w-[100%] transition-all duration-700 `}
       >
         <ul className="flex flex-col w-[100%] justify-center items-center bg-mainColor py-6 ">
           <li className=" w-[100%] px-5 text-white hover:bg-white hover:text-mainColor cursor-pointer font-bold transition-all duration-500 ">
@@ -141,7 +144,7 @@ const Nav = ({ background }) => {
             width: 100%;
             background-color: #407899;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-            z-index: 2;
+            z-index: 100;
           }
         `}
       </style>
