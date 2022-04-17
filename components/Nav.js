@@ -18,13 +18,13 @@ const Nav = ({ background }) => {
   }, []);
   return (
     // Start of Nav section
-    <nav className={`h-[55px] ${fixedNav} `}>
+    <nav className={`h-[60px] ${fixedNav} `}>
       {/* Navbar */}
       <div
         className={`flex justify-between h-[100%] items-center p-5  text-white ${background}`}
       >
         {/* Logo */}
-        <h3 className="font-bold">Olasunkanmi</h3>
+        <h3 className="font-bold text-2xl">Olasunkanmi</h3>
         {/* Hamburger Icon */}
         <button
           onClick={() => setShowNav(!showNav)}
@@ -59,21 +59,31 @@ const Nav = ({ background }) => {
           showNav ? "flex" : "hidden"
         } w-[100%] transition-all duration-700`}
       >
-        <ul className="flex flex-col w-[100%] justify-center items-center bg-white py-6 ">
-          <li className="py-3 w-[100%] pl-3 text-mainColor hover:text-white cursor-pointer font-bold transition-all duration-500 hover:bg-mainColor">
-            <Link href="/">Home</Link>
+        <ul className="flex flex-col w-[100%] justify-center items-center bg-mainColor py-6 ">
+          <li className=" w-[100%] px-5 text-white hover:bg-white hover:text-mainColor cursor-pointer font-bold transition-all duration-500 ">
+            <Link href="/">
+              <a className="py-5 block text-center  ">Home</a>
+            </Link>
           </li>
-          <li className="py-3 w-[100%] pl-3 text-mainColor hover:text-white cursor-pointer font-bold transition-all duration-500 hover:bg-mainColor">
-            <Link href="#about">About</Link>
+          <li className=" w-[100%] px-5 text-white hover:bg-white hover:text-mainColor cursor-pointer font-bold transition-all duration-500 ">
+            <Link href="#about">
+              <a className="py-5 block text-center  ">About</a>
+            </Link>
           </li>
-          <li className="py-3 w-[100%] pl-3 text-mainColor hover:text-white cursor-pointer font-bold transition-all duration-500 hover:bg-mainColor">
-            <Link href="#project">Projects</Link>
+          <li className=" w-[100%] px-5 text-white hover:bg-white hover:text-mainColor cursor-pointer font-bold transition-all duration-500 ">
+            <Link href="#project">
+              <a className="py-5 block text-center  ">Projects</a>
+            </Link>
           </li>
-          <li className="py-3 w-[100%] pl-3 text-mainColor hover:text-white cursor-pointer font-bold transition-all duration-500 hover:bg-mainColor">
-            <Link href="#service">Services</Link>
+          <li className=" w-[100%] px-5 text-white hover:bg-white hover:text-mainColor cursor-pointer font-bold transition-all duration-500 ">
+            <Link href="#service">
+              <a className="py-5 block text-center  ">Services</a>
+            </Link>
           </li>
-          <li className="py-3 w-[100%] pl-3 text-mainColor hover:text-white cursor-pointer font-bold transition-all duration-500 hover:bg-mainColor">
-            <Link href="#contact">Contact</Link>
+          <li className=" w-[100%] px-5 text-white hover:bg-white hover:text-mainColor cursor-pointer font-bold transition-all duration-500 ">
+            <Link href="#contact">
+              <a className="py-5 block text-center  ">Contact</a>
+            </Link>
           </li>
         </ul>
       </div>
