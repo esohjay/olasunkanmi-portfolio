@@ -1,0 +1,46 @@
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburgerTop,
+.hamburgerMiddle,
+.hamburgerBottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: white;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburgerMiddle {
+  transform: translateY(7px);
+}
+
+.hamburgerBottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburgerTop {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburgerTiddle {
+  display: none;
+}
+
+.open .hamburgerBottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
