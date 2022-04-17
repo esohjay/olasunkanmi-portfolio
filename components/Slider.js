@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import { FaQuoteRight } from "react-icons/fa";
-
 import data from "../lib/data";
 
 function Slider() {

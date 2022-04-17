@@ -19,6 +19,7 @@ function Project({ data }) {
             width="500"
             height="350"
             objectFit="cover"
+            alt={data.title}
           />
         </div>
         <div

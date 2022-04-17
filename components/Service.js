@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaDatabase } from "react-icons/fa";
+import { BsFillPieChartFill } from "react-icons/bs";
+import { DiGoogleAnalytics } from "react-icons/di";
+import { CgData } from "react-icons/cg";
+import { GiTeacher } from "react-icons/gi";
 
 function Service() {
   useEffect(() => {
@@ -29,7 +33,7 @@ function Service() {
         {/* Single Card */}
         <div className="text-center p-5 bg-white cursor-pointer hover:shadow-xl mb-6 transition-all duration-1000 ">
           <button className="rounded-full p-4 text-4xl  bg-transparent  text-lightColor border border-lightColor border-solid mb-5">
-            <FaDatabase />
+            <DiGoogleAnalytics />
           </button>
           <h3 className="text-2xl text-mainColor font-medium mb-5 ">
             Data Analysis
@@ -43,7 +47,7 @@ function Service() {
         {/* Single Card */}
         <div className="text-center p-5 bg-white cursor-pointer hover:shadow-xl mb-6 transition-all duration-1000 ">
           <button className="rounded-full p-4 text-4xl  bg-transparent  text-lightColor border border-lightColor border-solid mb-5">
-            <FaDatabase />
+            <BsFillPieChartFill />
           </button>
           <h3 className="text-2xl text-mainColor font-medium mb-5 ">
             Data Visualization
@@ -71,7 +75,7 @@ function Service() {
         {/* Single Card */}
         <div className="text-center p-5 bg-white cursor-pointer hover:shadow-xl mb-6 transition-all duration-1000 ">
           <button className="rounded-full p-4 text-4xl  bg-transparent  text-lightColor border border-lightColor border-solid mb-5">
-            <FaDatabase />
+            <CgData />
           </button>
           <h3 className="text-2xl text-mainColor font-medium mb-5 ">
             Data Mining
@@ -85,7 +89,7 @@ function Service() {
         {/* Single Card */}
         <div className="text-center p-5 bg-white cursor-pointer hover:shadow-xl mb-6 transition-all duration-1000 ">
           <button className="rounded-full p-4 text-4xl  bg-transparent  text-lightColor border border-lightColor border-solid mb-5">
-            <FaDatabase />
+            <GiTeacher />
           </button>
           <h3 className="text-2xl text-mainColor font-medium mb-5 ">
             Teaching &#38; Training

@@ -1,4 +1,3 @@
-import Nav from "./Nav";
 import Meta from "./Meta";
 import Footer from "./Footer";
 

@@ -66,6 +66,7 @@ function Project({ project }) {
                 width={500}
                 height={350}
                 objectFit="contain"
+                alt={project.title}
               />
             </div>
           </div>
@@ -126,7 +127,7 @@ export const getStaticPaths = async () => {
   console.log(paths);
   return {
     paths,
-    fallback: blocking,
+    fallback: "blocking",
   };
 };
 

@@ -11,7 +11,7 @@ function Footer() {
     const year = currentDate.getFullYear();
     setDate(year);
     AOS.init({ once: true });
-  });
+  }, []);
   return (
     <footer className="flex flex-col justify-center space-y-6 py-10 bg-altColor">
       <h3 className="text-center text-white text-xl font-medium">

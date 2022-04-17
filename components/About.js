@@ -51,6 +51,7 @@ const About = () => {
           width={500}
           height={350}
           objectFit="contain"
+          alt="olasunkanmi"
         />
         {/* <Image
           src="/../public/olasunkanmi.jpg"
