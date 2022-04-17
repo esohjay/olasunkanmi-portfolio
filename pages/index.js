@@ -32,7 +32,7 @@ export default function Home({ projects }) {
             data-aos-duration="1000"
             className="text-center text-white text-4xl font-bold md:text-6xl"
           >
-            I'm Olasunkanmi
+            I&apos;m Olasunkanmi
           </h1>
           <em
             data-aos="fade-up"
