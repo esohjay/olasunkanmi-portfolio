@@ -47,7 +47,7 @@ function Contact() {
             </p>{" "}
           </a>
         </div>
-        <div className="flex justify-center w-full">
+        <div className="flex justify-start w-full">
           <SocialBtns style={"bg-altColor bg-opacity-75"} />
         </div>
       </div>

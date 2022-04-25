@@ -156,7 +156,7 @@ const Nav = ({ background }) => {
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #58468c;
+            background-color: #407899;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
             z-index: 100;
             animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
