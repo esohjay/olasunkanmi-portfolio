@@ -17,7 +17,7 @@ function Contact() {
       <div className="w-full py-10 px-5 max-w-[800px] mx-auto ">
         <div className="flex items-center ">
           <FaMapMarkerAlt className="text-2xl text-altColor mx-2" />
-          <p className="text-md md:text-xl text-center text-mainColor mb-4">
+          <p className="text-md md:text-xl text-center text-mainColor">
             <span className="text-xl font-medium  md:text-2xl text-altColor mx-2">
               {" "}
               Address:
@@ -27,7 +27,7 @@ function Contact() {
         </div>
         <div className="flex items-center ">
           <FaPhoneAlt className=" text-2xl text-altColor mx-2" />
-          <p className="text-md md:text-xl text-mainColor mb-4">
+          <p className="text-md md:text-xl text-mainColor">
             {" "}
             <span className="text-xl font-medium  md:text-2xl text-altColor mx-2">
               {" "}
@@ -39,7 +39,7 @@ function Contact() {
         <div className="flex items-center mb-5">
           <FaEnvelope className="text-2xl text-altColor mx-2" />
           <a href="mailto:olasunkanmi@gmail.com">
-            <p className="text-md md:text-xl text-mainColor mb-4">
+            <p className="text-md md:text-xl text-mainColor">
               <span className="text-xl font-medium md:text-2xl text-altColor mx-2">
                 Email:
               </span>{" "}

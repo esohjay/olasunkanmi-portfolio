@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import navStyles from "../styles/Nav.module.css";
 
 const Nav = ({ background }) => {
   const [showNav, setShowNav] = useState(false);
@@ -157,9 +156,20 @@ const Nav = ({ background }) => {
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #407899;
+            background-color: #58468c;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
             z-index: 100;
+            animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
+          }
+          @keyframes fadeInDown {
+            0% {
+              opacity: 0;
+              transform: translateY(-20px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
           }
         `}
       </style>
