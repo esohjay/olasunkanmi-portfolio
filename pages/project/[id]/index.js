@@ -17,6 +17,8 @@ function Project({ project }) {
             color: "white",
             padding: "8px",
             marginBottom: "16px",
+            width: "100%",
+            overflow: "auto",
           }}
         >
           <code>{props.node.code}</code>
