@@ -102,9 +102,12 @@ function Project({ project }) {
               </p>
             </div>
             <div className="flex flex-col justify-center items-center p-5 w-full md:w-[45%] space-y-6">
-              <h3 className="text-mainColor text 2xl">Project Goals</h3>
+              <h3 className="text-mainColor text 2xl">Project Results</h3>
               <p className="text-lightColor">
-                <BlockContent blocks={project.goal} serializers={serializers} />
+                <BlockContent
+                  blocks={project.result}
+                  serializers={serializers}
+                />
               </p>
             </div>
           </div>
