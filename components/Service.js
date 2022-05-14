@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import { FaDatabase } from "react-icons/fa";
 import { BsFillPieChartFill } from "react-icons/bs";
 import { DiGoogleAnalytics } from "react-icons/di";
@@ -8,16 +8,12 @@ import { CgData } from "react-icons/cg";
 import { GiTeacher } from "react-icons/gi";
 
 function Service() {
-  useEffect(() => {
-    AOS.init({ once: true });
-  }, []);
+  // useEffect(() => {
+  //   //AOS.init({ once: true });
+  // }, []);
   return (
     <section id="service" className="w-full p-5 my-10 ">
-      <div
-        data-aos="fade-up"
-        data-aos-duration="700"
-        className="flex flex-col items-center justify-center mb-10"
-      >
+      <div className="flex flex-col items-center justify-center mb-10">
         <h2 className="font-bold text-3xl mb-5 text-mainColor">What I Do</h2>
         <p className="text-lightColor mb-4 text-center">
           Let me help make better use of your data. My expertise can be used to
@@ -26,8 +22,8 @@ function Service() {
         <div className="w-20 bg-lightColor h-[2px]"></div>
       </div>
       <div
-        data-aos-duration="1000"
-        data-aos="fade-up"
+        // data-aos-duration="1000"
+        // data-aos="fade-up"
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 md:px-14"
       >
         {/* Single Card */}

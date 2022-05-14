@@ -53,7 +53,18 @@ export default {
       name: "description",
       title: "Description",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        { type: "block" },
+        {
+          type: "image",
+        },
+        {
+          type: "code",
+          options: {
+            theme: "terminal",
+          },
+        },
+      ],
     },
   ],
 };

@@ -25,7 +25,11 @@ const Nav = ({ background }) => {
         }`}
       >
         {/* Logo */}
-        <h3 className="font-bold text-2xl">Olasunkanmi</h3>
+        <h3 className="font-bold text-2xl">
+          <Link href={"/"}>
+            <a>Olasunkanmi</a>
+          </Link>
+        </h3>
         {/* Hamburger Icon */}
         <button
           onClick={() => setShowNav(!showNav)}

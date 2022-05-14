@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 import Nav from "../components/Nav";
 import About from "../components/About";
@@ -14,9 +14,9 @@ import styles from "../styles/Home.module.css";
 import client from "../lib/config";
 
 export default function Home({ projects }) {
-  useEffect(() => {
-    AOS.init({ once: true });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ once: true });
+  // }, []);
   return (
     <div>
       <header className={`${styles.header} h-[80vh] md:h-[90vh]`}>
@@ -29,10 +29,10 @@ export default function Home({ projects }) {
             I&apos;m Olasunkanmi
           </h1>
           <em
-            data-aos="fade-up"
-            data-aos-offset="0"
-            data-aos-delay="50"
-            data-aos-duration="1000"
+            // data-aos="fade-up"
+            // data-aos-offset="0"
+            // data-aos-delay="50"
+            // data-aos-duration="1000"
             className="text-center text-white text-md md:text-xl"
           >
             Analyzing and visualizing data to make better and informed business
@@ -63,7 +63,8 @@ export default function Home({ projects }) {
 
 export async function getStaticProps() {
   const projects = await client.fetch(`
-  *[_type == "projects"] | order(title)`);
+  *[_type == "projects"] | order(_updatedAt desc)
+  `);
 
   return {
     props: {

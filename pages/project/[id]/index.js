@@ -10,9 +10,27 @@ function Project({ project }) {
   const serializers = {
     types: {
       code: (props) => (
-        <pre data-language={props.node.language}>
+        <pre
+          data-language={props.node.language}
+          style={{
+            background: "black",
+            color: "white",
+            padding: "8px",
+            marginBottom: "16px",
+          }}
+        >
           <code>{props.node.code}</code>
         </pre>
+      ),
+      image: ({ node: { asset } }) => (
+        <Image
+          src={urlFor(asset).url()}
+          layout="responsive"
+          width={400}
+          height={350}
+          objectFit="contain"
+          alt={project.title}
+        />
       ),
     },
   };
@@ -32,32 +50,36 @@ function Project({ project }) {
             <div className="w-20 bg-lightColor h-[2px]"></div>
           </div>
           <div
-            className=" flex flex-col justify-center bg-white items-center mb-12 md:px-14 py-10 lg:flex-row
-    lg:h-[500px] lg:justify-between"
+            className=" flex flex-col-reverse justify-center bg-white items-center mb-12 md:px-14 py-10 
+  "
           >
-            <div className="w-full p-5 lg:w-[45%]">
-              <p className="text-md md:text-lg text-center text-lightColor mb-12">
+            <div className="w-full p-5 lg:w-[70%]">
+              <p className="text-md md:text-lg  text-lightColor mb-12">
                 <BlockContent
                   blocks={project.description}
                   serializers={serializers}
+                  dataset={client.clientConfig.dataset}
+                  projectId={client.clientConfig.projectId}
                 />
               </p>
-              <Link href={project.projectLink}>
-                <a
-                  className="bg-mainColor block mb-5 text-white p-3 font-bold w-full text-center capitalize border-2 border-transparent hover:bg-transparent
-        hover:text-mainColor transition-all duration-700  hover:border-mainColor"
-                >
-                  View Project
-                </a>
-              </Link>
-              <Link href={project.codeLink}>
-                <a
-                  className="bg-transparent block  mb-5 text-mainColor p-3 font-bold w-full text-center capitalize border-2 border-mainColor hover:bg-mainColor
-     transition-all duration-700   hover:text-white"
-                >
-                  View on Github
-                </a>
-              </Link>
+              <div className="flex flex-col md:flex-row  justify-between">
+                <Link href={project.projectLink}>
+                  <a
+                    className="bg-mainColor block mb-5 text-white p-3 font-bold w-full text-center capitalize border-2 border-transparent hover:bg-transparent
+        hover:text-mainColor transition-all duration-700 md:w-1/4  hover:border-mainColor"
+                  >
+                    View Project
+                  </a>
+                </Link>
+                <Link href={project.codeLink}>
+                  <a
+                    className="bg-transparent block  mb-5 text-mainColor p-3 font-bold w-full text-center capitalize border-2 border-mainColor hover:bg-mainColor
+     transition-all duration-700 md:w-1/4  hover:text-white"
+                  >
+                    View on Github
+                  </a>
+                </Link>
+              </div>
             </div>
             <div className="w-full  p-5 lg:w-[45%] ">
               <Image
@@ -109,7 +131,6 @@ export const getStaticProps = async (context) => {
   );
 
   //   //const project = await res.json();
-  console.log(project);
 
   return {
     props: {
@@ -124,7 +145,7 @@ export const getStaticPaths = async () => {
 
   const ids = projects.map((project) => project._id);
   const paths = ids.map((id) => ({ params: { id: id.toString() } }));
-  console.log(paths);
+  // console.log(paths);
   return {
     paths,
     fallback: "blocking",

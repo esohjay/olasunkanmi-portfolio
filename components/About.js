@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+//import AOS from "aos";
+//import "aos/dist/aos.css";
 import Image from "next/image";
 
 import aboutImage from "../public/olasunkanmi.jpg";
 
 const About = () => {
-  useEffect(() => {
-    AOS.init({ once: true });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ once: true });
+  // }, []);
   return (
     <div
       id="about"
@@ -23,8 +23,8 @@ const About = () => {
           data scientist
         </p>
         <p
-          data-aos="slide-right"
-          data-aos-duration="1000"
+          // data-aos="slide-right"
+          // data-aos-duration="1000"
           className="text-xl text-lightColor mb-5"
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id animi
@@ -32,8 +32,8 @@ const About = () => {
           facere.
         </p>
         <button
-          data-aos="slide-right"
-          data-aos-duration="1000"
+          // data-aos="slide-right"
+          // // data-aos-duration="1000"
           className="bg-mainColor text-white p-3 font-bold w-full text-center capitalize border-2 border-transparent hover:bg-transparent
         hover:text-mainColor transition-all duration-700  hover:border-mainColor"
         >
@@ -41,8 +41,8 @@ const About = () => {
         </button>
       </div>
       <div
-        data-aos="slide-left"
-        data-aos-duration="1000"
+        // data-aos="slide-left"
+        // // data-aos-duration="1000"
         className="w-full  p-5 lg:w-[45%] "
       >
         <Image
