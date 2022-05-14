@@ -46,43 +46,36 @@ function Project({ project }) {
             <h2 className="font-bold text-3xl text-mainColor">
               {project?.title}
             </h2>
-            <p className="text-lightColor mb-4 text-center">
+            <p className="text-lightColor mb-2 text-center">
               {project?.summary}
             </p>
+            {/* Buttons for project and code link */}
+            <div className="flex flex-row  w-[60%] gap-2 p-2 mb-4 mx-auto justify-center">
+              <Link href={project.projectLink}>
+                <a
+                  className="bg-mainColor block text-sm text-white px-2 py-1 font-bold text-center capitalize border-2 border-transparent hover:bg-transparent
+            hover:text-mainColor transition-all duration-700   hover:border-mainColor"
+                >
+                  View Project
+                </a>
+              </Link>
+              <Link href={project.codeLink}>
+                <a
+                  className="bg-transparent block  text-sm text-mainColor px-2 py-1 font-bold text-center capitalize border-2 border-mainColor hover:bg-mainColor
+                transition-all duration-700   hover:text-white"
+                >
+                  View on Github
+                </a>
+              </Link>
+            </div>
+            {/*End of Buttons for project and code link */}
             <div className="w-20 bg-lightColor h-[2px]"></div>
           </div>
+          {/* Start of content area */}
           <div
-            className=" flex flex-col-reverse justify-center bg-white items-center mb-12 md:px-14 py-10 
+            className=" flex flex-col justify-center bg-white items-center mb-12 md:px-14 py-4 
   "
           >
-            <div className="w-full p-5 lg:w-[70%]">
-              <p className="text-md md:text-lg  text-lightColor mb-12">
-                <BlockContent
-                  blocks={project.description}
-                  serializers={serializers}
-                  dataset={client.clientConfig.dataset}
-                  projectId={client.clientConfig.projectId}
-                />
-              </p>
-              <div className="flex flex-col md:flex-row  justify-between">
-                <Link href={project.projectLink}>
-                  <a
-                    className="bg-mainColor block mb-5 text-white p-3 font-bold w-full text-center capitalize border-2 border-transparent hover:bg-transparent
-        hover:text-mainColor transition-all duration-700 md:w-1/4  hover:border-mainColor"
-                  >
-                    View Project
-                  </a>
-                </Link>
-                <Link href={project.codeLink}>
-                  <a
-                    className="bg-transparent block  mb-5 text-mainColor p-3 font-bold w-full text-center capitalize border-2 border-mainColor hover:bg-mainColor
-     transition-all duration-700 md:w-1/4  hover:text-white"
-                  >
-                    View on Github
-                  </a>
-                </Link>
-              </div>
-            </div>
             <div className="w-full  p-5 lg:w-[45%] ">
               <Image
                 src={urlFor(project?.imgUrl).url()}
@@ -93,16 +86,29 @@ function Project({ project }) {
                 alt={project.title}
               />
             </div>
-          </div>
-          <div className="flex flex-col md:flex-row justify-center items-center w-full p-5 mb-10">
-            <div className="flex flex-col justify-center items-center p-5 w-full md:w-[45%] space-y-6">
-              <h3 className="text-mainColor text 2xl">Project Goals</h3>
+            <div className="p-5 w-full md:w-[70%] space-y-6">
+              <h3 className="text-mainColor text-3xl font-bold capitalize">
+                About the project
+              </h3>
               <p className="text-lightColor">
                 <BlockContent blocks={project.goal} serializers={serializers} />
               </p>
             </div>
-            <div className="flex flex-col justify-center items-center p-5 w-full md:w-[45%] space-y-6">
-              <h3 className="text-mainColor text 2xl">Project Results</h3>
+            <div className="w-full p-5 lg:w-[70%] space-y-6 mb-5">
+              <h3 className="text-mainColor text-3xl font-bold mb-5 capitalize">
+                project details
+              </h3>
+              <p className="text-md md:text-lg  text-lightColor">
+                <BlockContent
+                  blocks={project.description}
+                  serializers={serializers}
+                  dataset={client.clientConfig.dataset}
+                  projectId={client.clientConfig.projectId}
+                />
+              </p>
+            </div>
+            <div className=" p-5 w-full md:w-[70%] mb-5 space-y-6">
+              <h3 className="text-mainColor text-3xl font-bold">Conclusion</h3>
               <p className="text-lightColor">
                 <BlockContent
                   blocks={project.result}
@@ -110,6 +116,24 @@ function Project({ project }) {
                 />
               </p>
             </div>
+          </div>
+          <div className="flex flex-col md:flex-row  w-[60%] p-5 mx-auto justify-between">
+            <Link href={project.projectLink}>
+              <a
+                className="bg-mainColor block mb-5 text-white p-3 font-bold w-full text-center capitalize border-2 border-transparent hover:bg-transparent
+        hover:text-mainColor transition-all duration-700 md:w-1/4  hover:border-mainColor"
+              >
+                View Project
+              </a>
+            </Link>
+            <Link href={project.codeLink}>
+              <a
+                className="bg-transparent block  mb-5 text-mainColor p-3 font-bold w-full text-center capitalize border-2 border-mainColor hover:bg-mainColor
+     transition-all duration-700 md:w-1/4  hover:text-white"
+              >
+                View on Github
+              </a>
+            </Link>
           </div>
           <div className="w-full text-center">
             <Link href="/">
