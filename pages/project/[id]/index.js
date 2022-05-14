@@ -56,7 +56,7 @@ function Project({ project }) {
                   className="bg-mainColor block text-sm text-white px-2 py-1 font-bold text-center capitalize border-2 border-transparent hover:bg-transparent
             hover:text-mainColor transition-all duration-700   hover:border-mainColor"
                 >
-                  View Project
+                  Visit site
                 </a>
               </Link>
               <Link href={project.codeLink}>
